@@ -66,17 +66,23 @@ body.dark {
     pointer-events: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     top: 0;
     height: 200vmin;
     transform: rotate(var(--rotation));
+    transition: transform var(--transition-delay);
+}
+
+.dark .sun-moon-container {
+    --rotation: 180deg;
 }
 
 .sun-icon,
 .moon-icon {
     position: absolute;
     transition: opacity, fill, var(--transition-delay);
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     fill: var(--accent-color);
 }
 
@@ -91,6 +97,7 @@ body.dark {
 .moon-icon {
     bottom: 5%;
     opacity: 0;
+    transform: rotate(180deg);
 
 }
 
